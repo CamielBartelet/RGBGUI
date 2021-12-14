@@ -22,7 +22,6 @@ let pyshell = new PythonShell('engine/my_script.py', options);
 pyshell.send(+e.value);
 
 pyshell.on('message', function (message) {
-  // received a message sent from the Python script (a simple "print" statement)
   console.log("message" + message);
   txt = message;
   document.getElementById('p1').innerHTML = txt;
